@@ -4,7 +4,7 @@ import sys
 from game import Game
 import pickle
 
-server = "192.168.0.101"
+server = "192.168.0.245"
 port = 5555
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -15,7 +15,7 @@ except socket.error as e:
     str(e)  
 
 
-s.listen(2)
+s.listen()
 print("Waiting for a connection, Server Started")
 
 connected = set()
